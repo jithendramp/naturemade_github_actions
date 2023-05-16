@@ -3,6 +3,7 @@ import LoginPage from '../pageobjects/login.page.js'
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {
         await browser.url('/')
+        // await browser.fullscreenWindow()
         expect(await LoginPage.enterPWDLink).toHaveTextContaining('Enter using password')
         await LoginPage.enterPWDLink.click()
         await LoginPage.inputPassword.setValue('port80')
