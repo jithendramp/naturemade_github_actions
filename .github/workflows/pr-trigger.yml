@@ -21,8 +21,14 @@ jobs:
 
       - name: Run WDIO tests
         run: npm run wdio
-        
-      - name: Download artifacts
+  
+  upload-artifacts:
+    needs: wdio
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifacts on failure
+        if: ${{ always() }}
         uses: actions/download-artifact@v2
         with:
           name: my-artifacts
