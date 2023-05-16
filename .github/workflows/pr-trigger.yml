@@ -26,4 +26,8 @@ jobs:
       - name: Run WDIO tests
         run: npm run wdio
         
-    
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: my-artifacts
+          path: path/to/download
