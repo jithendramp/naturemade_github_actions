@@ -19,5 +19,6 @@ describe('My Login application', () => {
         // await LoginPage.inputPassword.setValue('port80')
         // await LoginPage.enterBtn.click()
         // await LoginPage.acceptCookieBtn.click()
+        // await LoginPage.acceptCookieBtn.click()
     })
 })
