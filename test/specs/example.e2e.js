@@ -5,6 +5,7 @@ describe('My Login application', () => {
         await browser.url('/')
         // await browser.fullscreenWindow()
         // await browser.fullscreenWindow()
+        // await browser.fullscreenWindow()
         expect(await LoginPage.enterPWDLink).toHaveTextContaining('Enter using password')
         await LoginPage.enterPWDLink.click()
         await LoginPage.inputPassword.setValue('port80')
