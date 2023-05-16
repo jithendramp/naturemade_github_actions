@@ -18,6 +18,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        
+      - name: Install Java
+        run:  apt update && apt install default-jre -y
+              apt-get update && apt-get install -yq libgconf-2-4
 
       - name: Run WDIO tests
         run: npm run wdio
+        
+    
