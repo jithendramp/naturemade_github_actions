@@ -11,5 +11,3 @@ describe('My Login application', () => {
         await LoginPage.acceptCookieBtn.click()
     })
 })
-
-
