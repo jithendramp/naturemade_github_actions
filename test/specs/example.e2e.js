@@ -10,4 +10,14 @@ describe('My Login application', () => {
         await LoginPage.enterBtn.click()
         await LoginPage.acceptCookieBtn.click()
     })
+
+    it('Fail Scenario', async () => {
+        await browser.url('/')
+        // await browser.fullscreenWindow()
+        expect(await LoginPage.enterPWDLink).toHaveTextContaining('Enter using password')
+        await LoginPage.enterPWDLink.click()
+        // await LoginPage.inputPassword.setValue('port80')
+        // await LoginPage.enterBtn.click()
+        // await LoginPage.acceptCookieBtn.click()
+    })
 })
